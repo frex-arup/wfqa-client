@@ -1,0 +1,24 @@
+{
+    "mro": [
+        {
+            "caption": "Home",
+            "route": "mro/dashboard",
+            "icon": "fa fa-home",
+            "subItems": []
+        },
+        {
+            "caption": "Search Lab Results",
+            "route": "",
+            "icon": "fa fa-search",
+            "subItems": []
+        },
+        {
+            "caption": "Input Lab Results",
+            "route": "mro/input-lab-results",
+            "icon": "fa fa-file-edit",
+            "subItems": []
+        }
+    ],
+    "tpa": [],
+    "der": []
+}

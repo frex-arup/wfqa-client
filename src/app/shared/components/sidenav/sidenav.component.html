@@ -1,0 +1,44 @@
+<aside class="app-sidebar">
+    <div class="app-sidebar__logo">
+        <a class="header-brand" href="javascript:void(0);">
+            <img src="assets/images/brand/logo.png" class="header-brand-img desktop-lgo" alt="Wfqa logo">
+            <img src="assets/images/brand/MicrosoftTeams-image (2).png" class="header-brand-img dark-logo"
+                alt="Wfqa logo">
+            <img src="assets/images/brand/favicon.png" class="header-brand-img mobile-logo" alt="Wfqa logo">
+            <img src="assets/images/brand/hdcapa-logo.jpeg" class="header-brand-img darkmobile-logo" alt="Wfqa logo">
+        </a>
+    </div>
+    <ul class="side-menu app-sidebar3">
+        <ng-container *ngFor="let item of sidenavItems">
+            <ng-container *ngIf="item?.subItems?.length > 0; else showIndependentItem">
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);">
+                        <i class="{{item?.icon}} side-menu__icon" width="24" height="24" viewBox="0 0 24 24"
+                            aria-hidden="true"></i>
+                        <span class="side-menu__label">{{item?.caption}}</span>
+                        <i class="angle fe fe-chevron-right"></i>
+                    </a>
+                    <ul class="slide-menu">
+                        <ng-container *ngFor="let subItem of item?.subItems">
+                            <li>
+                                <a (click)="navigateByUrl(subItem?.route)" class="slide-item">
+                                    <i class="{{subItem?.icon}} side-menu__icon" width="24" height="24" viewBox="0 0 24 24"
+                                        aria-hidden="true"></i>
+                                    <span class="side-menu__label">{{subItem?.caption}}</span>
+                                </a>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </li>
+            </ng-container>
+            <ng-template #showIndependentItem>
+                <li class="slide">
+                    <a class="side-menu__item" href="javascript:void(0);" (click)="navigateByUrl(item?.route)" >
+                        <i class="{{item?.icon}} side-menu__icon" aria-hidden="true"></i>
+                        <span class="side-menu__label">{{item?.caption}}</span>
+                    </a>
+                </li>
+            </ng-template>
+        </ng-container>
+    </ul>
+</aside>

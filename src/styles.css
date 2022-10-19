@@ -1,1 +1,253 @@
-/* You can add global styles to this file, and also import other style files */
+.p-my-1 {
+   margin-top: 1rem;
+}
+
+.master-container {
+   margin-top: 0.2rem;
+}
+
+.p-mx-1 {
+   margin-right: 1rem !important;
+}
+
+.p-mx-05 {
+   margin-right: 0.5rem !important;
+}
+
+.mt-2 {
+   margin-top: 2vh !important;
+}
+
+.selected {
+   background-color: rgb(149, 173, 195) !important;
+}
+
+.w-100 {
+   width: 100%;
+}
+
+.application-form label::after {
+   content: " :";
+}
+
+.view-icon:hover {
+   color: blue;
+}
+
+.delete-icon:hover {
+   color: red;
+}
+
+.edit-icon:hover {
+   color: green;
+}
+
+.Viewdetails-form {
+   background-color: whitesmoke;
+}
+
+.p-dialog-mask {
+   z-index: 9999999 !important;
+}
+
+.p-inputtextarea {
+   width: 100%;
+}
+
+userdetails-form {
+   background-color: whitesmoke;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+   padding: 0.2rem 0.2rem !important;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+   padding: 0.3rem 0.3rem !important;
+}
+
+.p-inputtext {
+   padding: 0.3rem !important;
+}
+
+.p-button {
+   padding: 0.3rem 1rem !important;
+}
+
+.dark-menu .p-datatable .p-datatable-thead>tr>th {
+   background: #2a2e3f !important;
+   color: #ffffff !important;
+}
+
+.dark-menu .p-datatable .p-datatable-tbody>tr>td {
+   color: #000 !important;
+   border: 1px solid #c6cfd7 !important;
+}
+
+.master-container-body {
+   height: 80vh;
+}
+
+.p-datatable .p-datatable {
+   border: #711717;
+}
+
+.circuler-image {
+   border-radius: 50%;
+}
+
+.user-pic-position {
+   margin-top: -12rem;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.user-cover-detail {
+   color: #ffffff;
+   margin-top: -1.5rem;
+}
+
+.user-info-card {
+   margin-left: 1rem;
+   padding: 1rem;
+   background-color: rgb(212 200 216);
+   overflow: hidden;
+   min-height: 8rem;
+}
+
+.user-info-bar {
+   margin-left: 1rem;
+   padding: 1rem;
+   background-color: rgb(212 200 216);
+   overflow: hidden;
+   min-height: 100%;
+}
+
+.uic_head h3 {
+   font-size: 13px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   margin: auto;
+   display: inline-block;
+   vertical-align: sub;
+}
+
+.p-orderlist .p-orderlist-list {
+   background-color: aliceblue !important;
+}
+
+.p-dialog .p-dialog-header {
+   background: #2a2e3f !important;
+   border-bottom: 0 none;
+   background: #ffffff;
+   color: #495057;
+   padding: 5px 15px !important;
+   border-top-right-radius: 3px;
+   border-top-left-radius: 3px
+}
+
+.p-dialog-title {
+   color: #fff !important;
+}
+
+.bt-login {
+   color: white !important;
+   background: #e8881b !important;
+}
+
+.register-1:before {
+   background: rgb(232, 136, 27, 0.95);
+   bottom: 0;
+   content: "";
+   height: 100%;
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 100%;
+}
+
+.login-bg {
+   /* background-color: #adb1b2; */
+   background: rgba(0, 0, 0, 0.04) url(./assets/images/wfqa/Login_bg.png) top center repeat;
+   font-family: 'Open Sans', sans-serif !important;
+}
+
+.p-card .p-card-body {
+   padding: 1rem;
+   background-color: #ffffff;
+   border-radius: 8px;
+}
+
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
+   background: #29336d !important;
+   border-color: #dee2e6 !important;
+   color: #ffffff !important;
+   border-bottom-right-radius: 0 !important;
+   border-bottom-left-radius: 0 !important;
+}
+
+.app-content .side-app {
+   padding: 0.7rem !important;
+}
+label {
+   color: #000000ba;
+   font-weight: 500;
+   margin-bottom: unset !important;
+}
+
+.field {
+   margin-bottom: 1.5rem !important;
+}
+
+::placeholder,  .p-dropdown .p-dropdown-label.p-placeholder { 
+   color: rgb(197, 192, 192) !important;
+   opacity: 1;
+ }
+ 
+.incident-table th{
+width: 10rem !important;
+}
+.incident-table td{
+   width: 10rem !important;
+   }
+.application-user th{
+width: 10rem !important;
+
+}
+.application-user td{
+   width: 10rem !important;
+   
+   }
+
+   .p-picklist .p-picklist-header {
+      padding: 0.3rem !important;
+      text-align: center;
+  }
+
+  .height-70vh {
+   height: 75vh;
+}
+.limitTextHeight {
+   height: 17vh;
+   overflow: hidden;
+}
+.p-overlaypanel {
+   background: #ffffff;
+   color: #495057;
+   border: 0 none;
+   border-radius: 3px;
+   box-shadow: 0px 11px 15px -7px rgb(0 0 0 / 20%), 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+   z-index: 9999999 !important;
+   max-width: 50%;
+   justify-content: center;
+}
+.p-multiselect .p-multiselect-label {
+   padding: 0.3rem !important;
+   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+   color: rgb(197, 192, 192) !important;
+   opacity: 1;
+}
+.incident-details span{
+  font-weight: 600 !important;
+   }

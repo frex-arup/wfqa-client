@@ -1,0 +1,18 @@
+{
+    "mro": [
+        {
+            "caption": "MRO Lab Results Search Options",
+            "route": "",
+            "icon": "",
+            "loadFromTemplate": false
+        },
+        {
+            "caption": "Input Lab Result",
+            "route": "mro/input-lab-results",
+            "icon": "",
+            "loadFromTemplate": false
+        }
+    ],
+    "tpa": [],
+    "der": []
+}

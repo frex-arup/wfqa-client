@@ -1,0 +1,151 @@
+{
+  "usermanagement": {
+    "user": "User",
+    "username": "User ID",
+    "password": "Password",
+    "fullname": "Full Name",
+    "confirmpassword": "Confirm Password",
+    "email": "Email",
+    "login": "Login",
+    "signup": "Sign-up",
+    "signin": "Sign-In",
+    "mobile": "Phone No.",
+    "placeholder": "Placeholder",
+    "emailid": "Email id",
+    "name": "Name",
+    "phone": "Phone",
+    "priority": "Priority",
+    "plant": "Plant",
+    "department": "Department",
+    "role": "Role",
+    "userDetails": "User Details",
+    "location": "Location",
+    "designation": "Designation",
+    "applicationUser": "Application User",
+    "masterData": "Master Data",
+    "status": "Status",
+    "category": "Category",
+    "uploadUsers": "Upload Users",
+    "succeful": " Successful",
+    "userActivation": "User Activation",
+    "image": "Image",
+    "file": "File",
+    "uploadPicture": "Upload Picture",
+    "usersSheet": "Download sheet",
+    "dashboard": "Dashboard",
+    "active": "Active",
+    "deactive": "Deactive",
+    "invalidUser": "Invalid User! Please contact to admin!",
+    "loginFail": "Login Fails"
+  },
+  "message": {
+    "2000": {
+      "header": "",
+      "body": "Already exists"
+    },
+    "1001": {
+      "header": "User",
+      "body": "Created"
+    },
+    "1002": {
+      "header": "User",
+      "body": "Updated"
+    },
+    "1003": {
+      "header": "User",
+      "body": "Deleted"
+    },
+    "1004": {
+      "header": "User",
+      "body": "Can't be deleted"
+    },
+    "1005": {
+      "header": "User",
+      "body": "Uploaded"
+    },
+    "1006": {
+      "header": "User",
+      "body": "Enabled"
+    },
+    "1007": {
+      "header": "User",
+      "body": "Disabled"
+    },
+    "1008": {
+      "header": "User",
+      "body": "No Data available"
+    },
+    "1009": {
+      "header": "User",
+      "body": "Fetched Successfully"
+    },
+    "1010": {
+      "header": "User",
+      "body": "Assigned"
+    }
+  },
+  "masterData": {
+    "name": "Name",
+    "action": "Action",
+    "create": "Create",
+    "reset": "Reset",
+    "update": "Update",
+    "upload": "Upload",
+    "save": "Save",
+    "assign": "Assign"
+  },
+  "genericMessage": {
+    "dropdownPlaceholder": "--Please Select--",
+    "noRecordFound": "--No Record Found--",
+    "allMandatory": "All fields are mandatory.",
+    "datePickerPlaceholder": "Select Date",
+    "submit": "Submit"
+  },
+  "incident": {
+    "incidentdetail": "Incident Detail",
+    "incident": "Incident",
+    "incidentForm": "Incident Form",
+    "incidentDetails": "Incident Details",
+    "incidentid": "Incident ID",
+    "plant": "Plant",
+    "category": "Category",
+    "date": "Date/Time",
+    "location": "Location/Area",
+    "nameOfTheEmployee": "Name Of the Employee",
+    "name&TokennoOfEmployee": "Name & Token No of Employee",
+    "nameOfTheContractor&Workmen": "Name of the Contractor & workmen",
+    "ownerOfArea": "Owner of Area/HOD",
+    "descriptionOfAccident": "Description of Accident/incident",
+    "investigationStatus": "Investigation Status",
+    "investigationDate": "Investigation Date/Time",
+    "incidentDate": "Incident Date",
+    "dateOfFormationOfInvestigationTeam": "Date of formation of Investigation Team",
+    "dateComplted": "Date Completed",
+    "tapRootExpert": "Tap root Expert ",
+    "contributionFactros": "Contribution factors / Root Causes",
+    "correctiveActions": "Corrective Actions & Preventive Actions",
+    "status": "Status",
+    "taprootRootCause": "Taproot causes",
+    "pictureCaptured": "Picture Captured",
+    "tokenNoOfEmployee": "Token number of Employee",
+    "nameOftheContracter": "Name of The Contracter",
+    "correctiveActionss": "Corrective Actions",
+    "assignDate": "Assign Date",
+    "remark": "Remark",
+    "correctiveId": "Corrective/Preventive ID",
+    "description": "Description",
+    "horizontalDeployment": "Horizontal Deployment",
+    "assignTo": "Assign To",
+    "createActionItem": "Would you like to create an action item ?",
+    "correctiveActionsByPlant": "Corrective and Preventive Actions by plant",
+    "byLocation": "By Location",
+    "byHod": "By HOD",
+    "byStatus": "By Status",
+    "totalNoOfIncident": "Total Incidents",
+    "totatNoRootCauses": "Total Root Causes",
+    "noOfIncAssignedToPlants": "Total Incidents assigend",
+    "noOfCorrectiveActions": "Total No. of Corrective Actions",
+    "precautions": "Precautions",
+    "rootCauses": "Root causes"
+  }
+}
