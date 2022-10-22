@@ -1,1 +1,94 @@
-<p>landing-page works!</p>
+<p-card>
+    <div class="grid">
+        <div class="col-12 form-header">Input Lab Result</div>
+    </div>
+    <div class="formgrid grid">
+        <div class="col-12 font-semibold">Please select how you want to search Lab Account</div>
+
+        <div class="col-12 mt-3">
+            <div class="grid">
+                <div class="col-6">
+                    <p-radioButton name="searchBy" [value]=true [(ngModel)]="searchByLAN" label="By Lab Account Number">
+                    </p-radioButton>
+                </div>
+                <div class="col-6">
+                    <p-radioButton name="searchBy" [value]=false [(ngModel)]="searchByLAN"
+                        label="By Customer, test type or lab"></p-radioButton>
+                </div>
+            </div>
+        </div>
+
+        <ng-container *ngIf="searchByLAN">
+            <hr />
+            <div class="col-12"></div>
+            <div class="col-12 md:col-4 field">
+                <label for="lan">&nbsp;&nbsp;Lab Account Number * </label>
+                <input pInputText inputId="lan" class="p-inputtext w-100" [(ngModel)]="selectedLabAccNo" placeholder="Lab Account Number" [required]=true>
+            </div>
+            <div class="col-12 text-right">
+                <button pButton pRipple class="p-mx-05" type="button" label="{{'button.continue'| translate}}"
+                    (click)="save()" [disabled]="!selectedLabAccNo"></button>
+                <button pButton pRipple type="button" label="{{'button.reset'| translate}}" (click)="reset()"></button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="!searchByLAN">
+            <div class="col-12 text-right">
+                <button pButton pRipple class="p-mx-05" type="button" label="{{'button.createLAN'| translate}}"
+                    (click)="save()" [disabled]="!selectedCustomer || !selectedTestType || !selectedLab"></button>
+            </div>
+
+            <div class="col-12 md:col-4 field">
+                <label for="customer">Customer * </label>
+                <p-dropdown  [options]="customerList"  styleClass="w-100" [(ngModel)]="selectedCustomer" optionLabel="name" [filter]="true"
+                    filterBy="name" optionValue="id" (onChange)="getLabAccNoList()"  [showClear]="true" placeholder="Select a Customer" inputId="customer" [required]=true>
+                </p-dropdown>
+            </div>
+
+            <div class="col-12 md:col-4 field">
+                <label for="testtype">Test Type * </label>
+                <p-dropdown  [options]="testTypeList"  styleClass="w-100" [(ngModel)]="selectedTestType"
+                     placeholder="Select a Test type" (onChange)="getLabAccNoList()" inputId="testtype" [required]=true>
+                </p-dropdown>
+            </div>
+
+            <div class="col-12 md:col-4 field">
+                <label for="lab">Lab </label>
+                <p-dropdown  [options]="labList"  styleClass="w-100" [(ngModel)]="selectedLab" optionLabel="name" [filter]="true"
+                    filterBy="name" optionValue="id" (onChange)="getLabAccNoList()"  [showClear]="true" placeholder="Select a Lab" inputId="lab">
+                </p-dropdown>
+            </div>
+
+            <div class="col-12 md:col-4 field">
+                <label for="lan">Lab Account Number *</label>
+                <p-dropdown  [options]="labAccNoList"  styleClass="w-100" [(ngModel)]="selectedLabAccNo" optionLabel="name" [filter]="true"
+                    filterBy="name" optionValue="id"  [showClear]="true" placeholder="Select a Lab Account Number" inputId="lan" [required]=true>
+                </p-dropdown>
+            </div>
+
+
+            <div class="col-12 md:col-4 field">
+                <label for="colSite">&nbsp;&nbsp;Collection Site Name </label>
+                <input pInputText inputId="colSite" [(ngModel)]="collectionSiteName" class="p-inputtext w-100">
+            </div>
+
+            <div class="col-12 md:col-4 field">
+                <label for="city">&nbsp;&nbsp;City </label>
+                <input pInputText inputId="city" [(ngModel)]="city" class="p-inputtext w-100">
+            </div>
+
+            <div class="col-12 md:col-4 field">
+                <label for="sortby">Sort Lab Account Numbers By </label>
+                <p-dropdown  [options]="sortByList"  styleClass="w-100" [(ngModel)]="sortBy"
+                    placeholder="" inputId="sortby">
+                </p-dropdown>
+            </div>
+
+            <div class="col-12 text-right">
+                <button pButton pRipple class="p-mx-05" type="button" label="{{'button.continue'| translate}}"
+                    (click)="save()" [disabled]="!selectedLabAccNo"></button>
+                <button pButton pRipple type="button" label="{{'button.reset'| translate}}" (click)="reset()"></button>
+            </div>
+        </ng-container>
+    </div>
+</p-card>

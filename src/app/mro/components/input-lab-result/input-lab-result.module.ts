@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SharedComponentsModule } from 'src/app/shared/components/shared-components.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AuthGuard } from 'src/app/shared/services/AuthGuard ';
 
 const route: Routes = [
   {
@@ -13,6 +14,7 @@ const route: Routes = [
     children: [
       {
         path:'',
+        canActivate: [AuthGuard],
         component: LandingPageComponent
       }
     ]

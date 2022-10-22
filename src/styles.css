@@ -26,10 +26,6 @@
    width: 100%;
 }
 
-.application-form label::after {
-   content: " :";
-}
-
 .view-icon:hover {
    color: blue;
 }
@@ -173,12 +169,6 @@ userdetails-form {
    font-family: 'Open Sans', sans-serif !important;
 }
 
-.p-card .p-card-body {
-   padding: 1rem;
-   background-color: #ffffff;
-   border-radius: 8px;
-}
-
 .p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
    background: #29336d !important;
    border-color: #dee2e6 !important;
@@ -190,48 +180,25 @@ userdetails-form {
 .app-content .side-app {
    padding: 0.7rem !important;
 }
-label {
-   color: #000000ba;
-   font-weight: 500;
-   margin-bottom: unset !important;
-}
 
 .field {
    margin-bottom: 1.5rem !important;
 }
 
-::placeholder,  .p-dropdown .p-dropdown-label.p-placeholder { 
-   color: rgb(197, 192, 192) !important;
-   opacity: 1;
- }
- 
-.incident-table th{
-width: 10rem !important;
+.p-picklist .p-picklist-header {
+   padding: 0.3rem !important;
+   text-align: center;
 }
-.incident-table td{
-   width: 10rem !important;
-   }
-.application-user th{
-width: 10rem !important;
 
-}
-.application-user td{
-   width: 10rem !important;
-   
-   }
-
-   .p-picklist .p-picklist-header {
-      padding: 0.3rem !important;
-      text-align: center;
-  }
-
-  .height-70vh {
+.height-70vh {
    height: 75vh;
 }
+
 .limitTextHeight {
    height: 17vh;
    overflow: hidden;
 }
+
 .p-overlaypanel {
    background: #ffffff;
    color: #495057;
@@ -242,12 +209,108 @@ width: 10rem !important;
    max-width: 50%;
    justify-content: center;
 }
+
 .p-multiselect .p-multiselect-label {
    padding: 0.3rem !important;
    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
    color: rgb(197, 192, 192) !important;
    opacity: 1;
 }
-.incident-details span{
-  font-weight: 600 !important;
-   }
+
+.form-header {
+   font-size: 21px !important;
+   font-weight: 500 !important;
+   color: #25486a !important;
+}
+
+/* Card CSS Starts here*/
+.p-card .p-card-body {
+   padding: 1rem;
+   background-color: #ffffff;
+   border-radius: 8px;
+}
+
+
+.p-card .p-card-content {
+   font-family: 'Roboto', sans-serif;
+   font-size: 14px;
+   padding: 0 !important;
+}
+
+.p-card .p-card-title {
+   font-size: 1.5rem;
+   font-weight: 500 !important;
+   margin-bottom: 0.5rem;
+   color: #3b1d8f;
+}
+
+.form-box .p-card .p-card-content {
+   padding: 0 !important;
+}
+
+.form-box .p-card .p-card-body {
+   padding: 20px;
+}
+
+.form-box .md\:col-6 {
+   flex: 0 0 auto;
+   padding: 15px;
+   width: 50%;
+}
+
+.p-card {
+   background: #ffffff;
+   color: #495057;
+   box-shadow: none !important;
+   border-radius: 3px;
+}
+
+.p-card .p-card-body {
+   word-wrap: break-word;
+   background-clip: border-box;
+   background-color: #fff;
+   border: 1px solid transparent;
+   border-radius: 0.3rem;
+   box-shadow: 0 -3px 31px 0 rgb(0 0 0 / 5%), 0 6px 20px 0 rgb(0 0 0 / 2%);
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 0;
+   min-width: 0;
+   position: relative;
+   width: 100%;
+}
+
+.p-card .p-card-title {
+   font-size: 20px;
+   font-weight: 700;
+   margin-bottom: 0.5rem;
+}
+
+.p-card .p-card-title {
+   font-size: 20px !important;
+   font-weight: 700;
+   margin-bottom: 0.5rem !important;
+   color: #25486a !important;
+   border-top-left-radius: 10px !important;
+   border-top-right-radius: 10px !important;
+   padding: 5px !important;
+   font-size: 20px !important;
+}
+
+/* Card CSS Ends here*/
+
+label {
+   color: #495057;
+   font-weight: 600;
+   margin-bottom: 0px;
+}
+
+/* p-dropdown CSS starts here*/
+
+::placeholder,
+.p-dropdown .p-dropdown-label.p-placeholder {
+   color: rgb(197, 192, 192) !important;
+   opacity: 1;
+}
+
+/* p-dropdown CSS ends here*/

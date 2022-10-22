@@ -20,6 +20,13 @@ export class UserService {
   public getCurrentRole() : string {
     return this.getSessionUser?.role;
   }
+
+  public isUserLoggedIn() : boolean {
+    if (this.getSessionUser && this.getSessionUser?.loginUserId) {
+      return true;
+    }
+    return false;
+  }
   
   public get getSessionUser(): User {
     if (!this.sessionUser) {

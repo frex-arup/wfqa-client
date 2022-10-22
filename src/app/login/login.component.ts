@@ -25,10 +25,15 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
+    if (this.userService.isUserLoggedIn()) {
+      if (this.userService.getCurrentRole() === 'mro') {
+        this.router.navigateByUrl('mro/dashboard');
+      } else {
+        this.router.navigateByUrl('mro/dashboard');
+      }
+    }
     this.showLogin = true;
     this.loadScript();
-    // this.user.username = "admin";
-    // this.user.password = "Admin";
   }
 
   login() {
@@ -39,13 +44,7 @@ export class LoginComponent implements OnInit {
             "usermanagement.succeful"));
         this.userService.setSessionUser = res.data as User;
         this.userService.loggedInUser.next(res.data);
-        // if (res.data?.roles[0]?.name === 'ADMIN') {
-        //   this.router.navigateByUrl('admin/dashboard');
-        // } else if (res.data?.roles[0]?.name === 'MRO') {
-        // } else {
           this.router.navigateByUrl('mro/dashboard');
-        // }
-        // this.router.navigateByUrl('mro');
       }, (err) => {
         this.tostService.error(this.translateService.instant(
           "usermanagement.loginFail"), "", this.translateService.instant(
@@ -64,7 +63,3 @@ export class LoginComponent implements OnInit {
     body.appendChild(script);
   }
 }
-
-
-/* this.user.username = "rahul.anand@bipros.com"
-this.user.password = "R3@G$X2QNE", */

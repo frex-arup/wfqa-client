@@ -18,7 +18,8 @@ export class HttpInterceptorService implements HttpInterceptor {
     let currentUser = this.userService.getSessionUser;
     if (currentUser) {
       let authdata = window.btoa(
-        currentUser.loginUserId + ":" + currentUser.passwordHash
+        currentUser.loginUserId + ":" + 'Compliance01'
+        // currentUser.passwordHash
       );
       request = request.clone({
         setHeaders: {

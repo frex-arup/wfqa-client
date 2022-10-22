@@ -1,0 +1,68 @@
+/* .msglabel {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #000000;
+    font-weight: bold;
+    line-height: 16px;
+    vertical-align: top;
+}
+.dynamicData{
+    color: #d8d8d8;
+     width: fit-content;
+}
+
+.menuLabel {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color: #000000;
+    font-weight: bold;
+    line-height: 18px;
+    vertical-align: top;
+    
+}
+
+.welcome {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #333399;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.backColor{
+    background-color: #e5e5e5;
+}
+
+.NewBack{
+    border: 1px solid white;
+
+}
+
+.msg {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #000000;
+}
+.tableborder {
+    background: #E5E5E5;
+    
+}
+  .row-on div:hover{
+    background: #ffffcc;
+}
+.left {
+    border-right: 1px solid black;
+}
+.right {
+    border-left: 1px solid black;
+    margin-left: -1px;
+}
+.border-ridge {
+    border-style: ridge !important;
+}
+.pr{
+    padding-right: 50px !important;
+}
+.grid{
+    margin-top: 0px !important;
+} */

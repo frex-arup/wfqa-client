@@ -418,7 +418,7 @@
 
 .side-menu {
     margin-bottom: 0;
-    margin-top: 90px;
+    margin-top: 60px;
     padding-bottom: 40px
 }
 
@@ -504,12 +504,13 @@
 .side-menu .side-menu__icon {
     font-size: 1.24rem;
     height: 36px;
-    line-height: 30px;
+    line-height: 20px;
     margin-right: .5rem;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
-    width: 36px
+    width: 36px;
+    margin-bottom: 4px;
 }
 
 .side-menu__icon {

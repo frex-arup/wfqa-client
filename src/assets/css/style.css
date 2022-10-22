@@ -42977,7 +42977,7 @@ body.rtl {
 
 .closed-menu .side-menu {
     margin-bottom: 0;
-    margin-top: 90px;
+    margin-top: 60px;
     padding-bottom: 40px
 }
 
@@ -43062,13 +43062,14 @@ body.rtl {
 
 .closed-menu .side-menu .side-menu__icon {
     font-size: 1.24rem;
-    height: 36px;
+    height: 20px;
     line-height: 30px;
     margin-right: .5rem;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
-    width: 36px
+    width: 36px;
+    margin-bottom: 4px;
 }
 
 .closed-menu .side-menu__icon {
@@ -44716,7 +44717,7 @@ body.rtl {
 
 .side-menu {
     margin-bottom: 0;
-    margin-top: 90px;
+    margin-top: 60px;
     padding-bottom: 40px
 }
 
@@ -44802,12 +44803,13 @@ body.rtl {
 .side-menu .side-menu__icon {
     font-size: 1.24rem;
     height: 36px;
-    line-height: 30px;
+    line-height: 20px;
     margin-right: .5rem;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
-    width: 36px
+    width: 36px;
+    margin-bottom: 4px;
 }
 
 .side-menu__icon {
@@ -46440,7 +46442,7 @@ body.rtl {
 
 .icontext-menu .side-menu {
     margin-bottom: 0;
-    margin-top: 90px;
+    margin-top: 60px;
     padding-bottom: 40px
 }
 
@@ -46527,11 +46529,12 @@ body.rtl {
     fill: #555b6d;
     font-size: 1.24rem;
     height: 36px;
-    line-height: 30px;
+    line-height: 20px;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
-    width: 36px
+    width: 36px;
+    margin-bottom: 4px;
 }
 
 .icontext-menu .side-menu__icon {

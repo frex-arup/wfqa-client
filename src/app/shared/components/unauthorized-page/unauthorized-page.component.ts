@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'wfqa-unauthorized-page',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnauthorizedPageComponent implements OnInit {
 
-  constructor() { }
+  role: string;
+
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
+    this.role = this.userService.getCurrentRole();
+  }
+
+  goToHomePage() {
+    if(this.role === 'mro') {
+      this.router.navigateByUrl('mro/dashboard');
+    } else {
+      this.router.navigateByUrl('mro/dashboard');
+    }
   }
 
 }

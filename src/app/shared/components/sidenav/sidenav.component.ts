@@ -19,12 +19,16 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit(): void {
     this.role = this.userService.getCurrentRole();
+    this.getSideNavItems();
+  }
+
+  getSideNavItems() {
     this.apiService.getDataFromJson("../../../assets/json/sidenav-items.json").subscribe(resp => {
       this.sidenavItems = (resp as JSON[])[this.role];
       console.log(this.sidenavItems);
     }, error => {
       console.error(error)
-    })
+    });
   }
 
   navigateByUrl(url: string) {

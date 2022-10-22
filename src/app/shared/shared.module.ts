@@ -17,12 +17,8 @@ import { AccordionModule } from 'primeng/accordion';
 import { TooltipModule } from 'primeng/tooltip';
 import { PickListModule } from 'primeng/picklist';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { UnauthorizedPageComponent } from './components/unauthorized-page/unauthorized-page.component';
-
+import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 const dModules = [ImageModule,
   OverlayPanelModule,
@@ -42,7 +38,10 @@ const dModules = [ImageModule,
   DialogModule,
   DynamicDialogModule,
   TooltipModule,
-  PickListModule];
+  PickListModule,
+  DropdownModule,
+  RadioButtonModule
+];
 
 @NgModule({
   declarations: [],

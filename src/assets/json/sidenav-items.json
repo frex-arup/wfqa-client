@@ -3,19 +3,19 @@
         {
             "caption": "Home",
             "route": "mro/dashboard",
-            "icon": "fa fa-home",
+            "icon": "pi pi-home",
             "subItems": []
         },
         {
             "caption": "Search Lab Results",
             "route": "",
-            "icon": "fa fa-search",
+            "icon": "pi pi-search",
             "subItems": []
         },
         {
             "caption": "Input Lab Results",
             "route": "mro/input-lab-results",
-            "icon": "fa fa-file-edit",
+            "icon": "pi pi-check-square",
             "subItems": []
         }
     ],
