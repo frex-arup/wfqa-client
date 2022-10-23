@@ -1,0 +1,79 @@
+<p-card>
+    <div class="grid">
+        <div class="col-6 form-header">Input Lab Result</div>
+        <div class="col-6 pb-0">
+            <div class="grid m-0">
+                <div class="col-6"><label>Result Status:</label></div>
+                <div class="col-6">{{resultStatus}}</div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="heading">Lab Account Information</div>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="testtype">Test Type * </label>
+            <p-dropdown [options]="testTypeList" styleClass="w-100" [(ngModel)]="selectedTestType"
+                placeholder="Select a Test type" inputId="testtype" [required]=true>
+            </p-dropdown>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="lan">Lab Account Number *</label>
+            <p-dropdown [options]="labAccNoList" styleClass="w-100" [(ngModel)]="selectedLabAccNo" optionLabel="name"
+                [filter]="true" filterBy="name" optionValue="id" [showClear]="true"
+                placeholder="Select a Lab Account Number" inputId="lan" [required]=true>
+            </p-dropdown>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="location">Location:</label>
+            <input pInputText inputId="location" [(ngModel)]="locationName" class="p-inputtext w-100" [disabled]=true>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="customer">Customer:</label>
+            <input pInputText inputId="customer" [(ngModel)]="customerName" class="p-inputtext w-100" [disabled]=true>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="der">DER Name:</label>
+            <input pInputText inputId="der" [(ngModel)]="derName" class="p-inputtext w-100" [disabled]=true>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="derPhone">DER Phone:</label>
+            <input pInputText inputId="derPhone" [(ngModel)]="derPhone" class="p-inputtext w-100" [disabled]=true>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="mro">MRO:</label>
+            <input pInputText inputId="mro" [(ngModel)]="mro" class="p-inputtext w-100" [disabled]=true>
+        </div>
+        <div class="col-12 md:col-4 field">
+            <label for="lab">Lab:</label>
+            <input pInputText inputId="lab" [(ngModel)]="lab" class="p-inputtext w-100" [disabled]=true>
+        </div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12">
+            <div class="heading">Lab Account Information</div>
+        </div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12">
+            <div class="heading">Lab Account Information</div>
+        </div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+        <div class="col-12"></div>
+    </div>
+</p-card>

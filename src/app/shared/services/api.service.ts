@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment } from "src/environments/environment";
 
@@ -11,8 +11,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  get(url: string) {
-    return this.http.get(`${this.common_url}${url}`);
+  // get(url: string) {
+  //   return this.http.get(`${this.common_url}${url}`);
+  // }
+  get(url: string, params?: HttpParams) {
+    return this.http.get(`${this.common_url}${url}`, {params: params});
   }
   post(url: string, body: any) {
     return this.http.post(`${this.common_url}${url}`, body);

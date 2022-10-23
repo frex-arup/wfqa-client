@@ -23,11 +23,12 @@
             <div class="col-12"></div>
             <div class="col-12 md:col-4 field">
                 <label for="lan">&nbsp;&nbsp;Lab Account Number * </label>
-                <input pInputText inputId="lan" class="p-inputtext w-100" [(ngModel)]="selectedLabAccNo" placeholder="Lab Account Number" [required]=true>
+                <input pInputText inputId="lan" class="p-inputtext w-100" [(ngModel)]="selectedLabAccNo"
+                    placeholder="Lab Account Number" [required]=true>
             </div>
             <div class="col-12 text-right">
                 <button pButton pRipple class="p-mx-05" type="button" label="{{'button.continue'| translate}}"
-                    (click)="save()" [disabled]="!selectedLabAccNo"></button>
+                    (click)="continue()" [disabled]="!selectedLabAccNo"></button>
                 <button pButton pRipple type="button" label="{{'button.reset'| translate}}" (click)="reset()"></button>
             </div>
         </ng-container>
@@ -40,29 +41,41 @@
 
             <div class="col-12 md:col-4 field">
                 <label for="customer">Customer * </label>
-                <p-dropdown  [options]="customerList"  styleClass="w-100" [(ngModel)]="selectedCustomer" optionLabel="name" [filter]="true"
-                    filterBy="name" optionValue="id" (onChange)="getLabAccNoList()"  [showClear]="true" placeholder="Select a Customer" inputId="customer" [required]=true>
+                <p-dropdown [options]="customerList" styleClass="w-100" [(ngModel)]="selectedCustomer"
+                    optionLabel="name" [filter]="true" filterBy="name" optionValue="id" (onChange)="getLabAccNoList()"
+                    [showClear]="true" placeholder="Select a Customer" inputId="customer" [required]=true>
                 </p-dropdown>
             </div>
 
             <div class="col-12 md:col-4 field">
                 <label for="testtype">Test Type * </label>
-                <p-dropdown  [options]="testTypeList"  styleClass="w-100" [(ngModel)]="selectedTestType"
-                     placeholder="Select a Test type" (onChange)="getLabAccNoList()" inputId="testtype" [required]=true>
+                <p-dropdown [options]="testTypeList" styleClass="w-100" [(ngModel)]="selectedTestType"
+                    placeholder="Select a Test type" (onChange)="getLabAccNoList()" inputId="testtype" [required]=true>
                 </p-dropdown>
             </div>
 
             <div class="col-12 md:col-4 field">
                 <label for="lab">Lab </label>
-                <p-dropdown  [options]="labList"  styleClass="w-100" [(ngModel)]="selectedLab" optionLabel="name" [filter]="true"
-                    filterBy="name" optionValue="id" (onChange)="getLabAccNoList()"  [showClear]="true" placeholder="Select a Lab" inputId="lab">
+                <p-dropdown [options]="labList" styleClass="w-100" [(ngModel)]="selectedLab" optionLabel="name"
+                    [filter]="true" filterBy="name" optionValue="id" (onChange)="getLabAccNoList()" [showClear]="true"
+                    placeholder="Select a Lab" inputId="lab">
                 </p-dropdown>
             </div>
 
             <div class="col-12 md:col-4 field">
                 <label for="lan">Lab Account Number *</label>
-                <p-dropdown  [options]="labAccNoList"  styleClass="w-100" [(ngModel)]="selectedLabAccNo" optionLabel="name" [filter]="true"
-                    filterBy="name" optionValue="id"  [showClear]="true" placeholder="Select a Lab Account Number" inputId="lan" [required]=true>
+                <p-dropdown [options]="labAccNoList" styleClass="w-100" [(ngModel)]="selectedLabAccNo" [filter]="true"
+                    filterBy="name" optionValue="id" [showClear]="true" placeholder="Select a Lab Account Number"
+                    inputId="lan" [required]=true>
+                    <ng-template let-lan pTemplate="item">
+                        <div class="flex align-items-center operatingSystems-item">
+                            <div>{{lan?.subAccount}}
+                                <span *ngIf="lan?.lanDisplayName && lan?.lanDisplayName !== ''">-
+                                    {{lan?.lanDisplayName}}
+                                </span>
+                            </div>
+                        </div>
+                    </ng-template>
                 </p-dropdown>
             </div>
 
@@ -79,8 +92,8 @@
 
             <div class="col-12 md:col-4 field">
                 <label for="sortby">Sort Lab Account Numbers By </label>
-                <p-dropdown  [options]="sortByList"  styleClass="w-100" [(ngModel)]="sortBy"
-                    placeholder="" inputId="sortby">
+                <p-dropdown [options]="sortByList" optionLabel="name" styleClass="w-100" [(ngModel)]="sortBy"
+                    placeholder="" optionValue="id" inputId="sortby">
                 </p-dropdown>
             </div>
 

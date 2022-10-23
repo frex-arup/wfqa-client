@@ -6,6 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SharedComponentsModule } from 'src/app/shared/components/shared-components.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthGuard } from 'src/app/shared/services/AuthGuard ';
+import { InputLabResultDetailComponent } from './input-lab-result-detail/input-lab-result-detail.component';
 
 const route: Routes = [
   {
@@ -16,6 +17,11 @@ const route: Routes = [
         path:'',
         canActivate: [AuthGuard],
         component: LandingPageComponent
+      },
+      {
+        path:'detail',
+        canActivate: [AuthGuard],
+        component: InputLabResultDetailComponent
       }
     ]
   }
@@ -24,7 +30,8 @@ const route: Routes = [
 @NgModule({
   declarations: [
     InputLabResultComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    InputLabResultDetailComponent
   ],
   imports: [
     CommonModule,

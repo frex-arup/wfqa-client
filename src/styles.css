@@ -314,3 +314,13 @@ label {
 }
 
 /* p-dropdown CSS ends here*/
+
+.heading {
+   color: #000000;
+   line-height: 12pt;
+   font-weight: bold;
+   background-color: #FFCC66;
+   font-size: 15px;
+   margin: 0 0 5px 0;
+   padding: 8px 15px;
+}

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LabAccNoDTO } from 'src/app/mro/model/lab-acc-no-dto.model';
+import { InputLabResultService } from 'src/app/mro/services/input-lab-result.service';
 import { ApiResponse } from 'src/app/shared/model/api-response-model';
-import { IdName } from 'src/app/shared/model/id-name.model';
+import { IdName, IdNameStr } from 'src/app/shared/model/id-name.model';
 import { SiteService } from 'src/app/shared/services/site.service';
 import { TestTypeService } from 'src/app/shared/services/test-type.service';
 
@@ -18,17 +21,37 @@ export class LandingPageComponent implements OnInit {
   selectedTestType: string;
   labList: IdName[] = [];
   selectedLab: number;
-  labAccNoList: IdName[] = [];
+  labAccNoList: LabAccNoDTO[] = [];
   selectedLabAccNo: number;
-  sortByList: string[] = [];
-  sortBy: string = 'City';
+  sortByList: IdNameStr[] = [];
+  sortBy: string = 'city';
   city: string;
   collectionSiteName: string;
 
-  constructor(private siteService: SiteService, private testTypeService: TestTypeService) { }
+  constructor(private siteService: SiteService,
+    private testTypeService: TestTypeService,
+    private router: Router,
+    private inputLabResultService: InputLabResultService) { }
 
   ngOnInit(): void {
-    this.sortByList = ['City', 'Collection Site', 'Subaccount', 'State'];
+    this.sortByList = [
+      {
+        'id': 'city',
+        'name': 'City'
+      },
+      {
+        'id': 'collectionSite',
+        'name': 'Collection Site'
+      },
+      {
+        'id': 'subAccount',
+        'name': 'Sub Account'
+      },
+      {
+        'id': 'state',
+        'name': 'State'
+      }
+    ];
     this.getAllCustomers();
     this.getTestTypes();
     this.getLabList();
@@ -62,17 +85,33 @@ export class LandingPageComponent implements OnInit {
   }
 
   getLabAccNoList() {
-
+    if (this.selectedCustomer && this.selectedTestType) {
+      this.inputLabResultService.getLabAccountNoList(this.selectedCustomer, this.selectedTestType, this.selectedLab ? this.selectedLab :0,
+        0, this.city ? this.city : null, this.collectionSiteName ? this.collectionSiteName : null, this.sortBy, 'A').subscribe((res: ApiResponse) => {
+          this.labAccNoList = res.datas as LabAccNoDTO[];
+        }, (err: ApiResponse) => {
+          this.labAccNoList = [];
+          console.log(err.errorCode);
+        });
+    }
   }
 
-  reset() { 
+  reset() {
     this.selectedLabAccNo = undefined;
     this.selectedCustomer = undefined;
-    this.selectedLab = 0;
-    this.selectedTestType = null;
+    this.selectedLab = undefined;
+    this.selectedTestType = undefined;
     this.sortBy = 'City';
-    this.city= null;
-    this.collectionSiteName = null;
+    this.city = undefined;
+    this.collectionSiteName = undefined;
+  }
+
+  continue() {
+    if (this.searchByLAN) {
+
+    } else {
+    }
+    this.router.navigate(['mro/input-lab-results/detail'], { queryParams: { 'lanId': 'hi' } });
   }
 
   save() { }
